@@ -20,7 +20,7 @@ const signupPage =() =>{
   navigate('/signup')
 }
 const ContactPage =() =>{
-  navigate('/contactus')
+  navigate('/contact')
 }
 const HomePage =() =>{
   navigate('/')

@@ -12,7 +12,7 @@ const Dropdown =()=>{
         navigate('/signup')
       }
     const ContactPage =() =>{
-        navigate('/contactus')
+        navigate('contact')
       }
       
     return(
