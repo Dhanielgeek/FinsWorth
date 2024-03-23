@@ -1,0 +1,232 @@
+
+.AboutUsPage{
+    width: 100%;
+    height: 200vh;
+    background-color:rgb(234, 229, 229);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.AboutUsWrapper{
+    width: 90%;
+    height: 100%;
+    /* background-color: orange; */
+}
+
+.Aboutname{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color:green; */
+    gap: 10px;
+
+}
+.Aboutname h1{
+    font-size: 32px;
+    font-style: normal;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    color: #219EBC;
+
+    & span {
+      color:#023047;
+    }
+  }
+
+
+.Aboutname p{
+    font-size: 15px;
+    font-style: normal;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    color: #252422;
+    text-align: center;
+
+}
+.AboutCardHolder{
+    width: 100%;
+    height: 85%;
+    /* background-color: orangered; */
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 5%;
+}
+.AboutLeft{
+    width: 50%;
+    height: 50%;
+    background-color: #023047;;
+    border: 1px solid #023047 ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.AboutTextLeft{
+    width: 70%;
+    height: 80%;
+    background-color: #023047;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    padding-inline: 10px;
+}
+    .AboutTextLeft h1{
+    font-size: 25px;
+    font-style: normal;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    color: whitesmoke;
+    
+}
+.AboutTextLeft P{
+    font-size: 15px;
+    font-style: normal;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    color:whitesmoke;
+    
+}
+.AboutImgLeft{
+    width: 100%;
+    height: 100%;
+    /* background-color: aqua; */
+
+}
+.AboutImgLeft img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+@media screen and (max-width: 320px) {
+    .AboutUsPage{
+        width: 100%;
+        height: 100%;
+    }
+    .AboutUsWrapper{
+        width: 100%;
+    }
+    .Aboutname{
+        width: 100%;
+        margin-top: 10px;
+    }
+    .Aboutname h1{
+        font-size: 20px;
+    }
+    .Aboutname p{
+        font-size: 10px;
+    }
+    .AboutCardHolder{
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .AboutLeft{
+        width: 100%;
+    }
+    .AboutTextLeft {
+        width: 80%;
+    }
+    .AboutImgLeft {
+        width: 80%;
+    }
+    .AboutTextLeft h1 {
+        font-size: 20px;
+    }
+    .AboutTextLeft p {
+        font-size: 10px;
+    }
+}
+@media screen and (max-width: 414px) {
+    .AboutUsPage{
+        width: 100%;
+        height: 100%;
+    }
+    .AboutUsWrapper{
+        width: 100%;
+    }
+    .Aboutname{
+        width: 100%;
+        margin-top: 10px;
+    }
+    .Aboutname h1{
+        font-size: 20px;
+    }
+    .Aboutname p{
+        font-size: 10px;
+    }
+    .AboutCardHolder{
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .AboutLeft{
+        width: 100%;
+    }
+    .AboutTextLeft {
+        width: 80%;
+    }
+    .AboutImgLeft {
+        width: 80%;
+    }
+    .AboutTextLeft h1 {
+        font-size: 20px;
+    }
+    .AboutTextLeft p {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 476px) {
+    .AboutUsPage{
+        width: 100%;
+        height: max-content;
+        margin-top: 25px;
+    }
+    .AboutUsWrapper{
+        width: 90%;
+        height: 100%;
+    }
+   
+    .Aboutname{
+        width: 100%;
+        height: 20%;
+    }
+    .Aboutname p{
+        font-size:5px;
+    }
+    .AboutCardHolder{
+        width: 100%;
+        /* flex-wrap: wrap; */
+    }
+    .AboutLeft{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 900px) {
+    .AboutUsPage{
+        width: 100%;
+        height: 100%;
+    }
+    .AboutUsWrapper{
+        width: 90%;
+        height: 100%;
+    }
+    .Aboutname{
+        width: 100%;
+    }
+    .Aboutname p{
+        font-size: 20px;
+    }
+ .AboutTextLeft h1{
+    font-size: 25px;
+        
+    }
+ .AboutTextLeft p{
+    font-size: 15px;
+
+}
+}
