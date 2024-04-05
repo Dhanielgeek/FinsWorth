@@ -3,7 +3,7 @@ import './Auth.css'
 
 const Login = () => {
   return (
-    <div>Login</div>
+    <div className='text-4xl bg-slate-500'>Login</div>
   )
 }
 
