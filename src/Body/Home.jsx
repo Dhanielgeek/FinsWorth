@@ -20,7 +20,7 @@ const [ show, setShow] = useState(false)
 
       <Heroes/>     
       <About />
-      <Team/>
+      {/* <Team/> */}
       <Subscribe/>
       {/* <Footer/> */}
     
