@@ -34,7 +34,7 @@ function Login() {
       <button type="submit" className="bg-[#023047] text-white text-sm py-2 rounded-sm">Login</button>
       <div className="flex items-center justify-center">
         <span className="text-sm">Dont have an account? 
-        <Link to="signup" className="text-[#fb8c10] cursor-pointer">Create Account</Link></span>
+        <Link to="/signup" className="text-[#fb8c10] cursor-pointer">Create Account</Link></span>
       </div>
       </div>
     </form>
