@@ -8,8 +8,8 @@ const ForgetPassword = () => {
           <div className="text-lg text-[#023047] font-semibold flex justify-center">Forgotten Password?</div>
           <p className="text-xs md:text-sm">Please enter your email address. You will receive a link to create a new password.</p>
           <div>
-              <label className="text-sm text-[#023047]">Email/phone</label><br />
-              <input type="email" placeholder="Enter name" name="name" className="w-full border border-[#023047] rounded-sm text-sm py-[8px] px-2 outline-none"/>
+              <label className="text-sm text-[#023047]">Email</label><br />
+              <input type="email" placeholder="Email Address" name="name" className="w-full border border-[#023047] rounded-md text-sm py-[8px] px-2 outline-none"/>
           </div>
           <button type="submit" className="w-full bg-[#023047] text-white text-sm py-2 rounded-sm">Send Reset Link</button>
         </div>
