@@ -6,6 +6,7 @@ import Layout from './Components/Layout'
 import Home from './Body/Home'
 import Heroes from './Body/Heroes'
 import Contactus from './Body/ContactUs'
+import ForgetPassword from './Auth/ForgetPassword'
 
 
 const router = createBrowserRouter([
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
     {
         path: 'contact',
         element : <Contactus/>
+    },
+    {
+        path : 'forgetpass',
+        element : <ForgetPassword/>
     },
     {
         path: '/',
