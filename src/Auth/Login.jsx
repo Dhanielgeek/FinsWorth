@@ -18,13 +18,13 @@ const Login = () => {
         <p className="font-semibold text-sm md:text-xl text-[#023047]">Login</p>
         <div className="flex flex-col gap-4">
             <div>
-                <label className="text-sm text-[#023047]">Name</label><br />
-                <input type="text" placeholder="Enter name" name="name" className="w-full border border-[#023047]  rounded-sm text-sm py-[8px] px-2 outline-none"/>
+                <label className="text-sm text-[#023047]">Email</label><br />
+                <input type="text" placeholder="Email Address" name="name" className="w-full border border-[#023047]  rounded-md text-sm py-[8px] px-2 outline-none"/>
             </div>
             <div>
                 <label className="text-sm text-[#023047]">Password</label><br />
-                <input type={reveal ? 'text' : 'password'} placeholder="Enter password" name="password" className="w-full border border-[#023047]  rounded-sm text-sm py-[8px] px-2 outline-none"/>
-                <i class={`bx ${reveal ? 'bxs-show' : 'bxs-hide'} absolute right-8 top-[280px]`} onClick={handleReveal}></i>
+                <input type={reveal ? 'text' : 'password'} placeholder="Enter password" name="password" className="w-full border border-[#023047]  rounded-md text-sm py-[8px] px-2 outline-none"/>
+                <i class={`bx ${reveal ? 'bxs-show' : 'bxs-hide'} absolute right-10 top-[63%]`} onClick={handleReveal}></i>
             </div>
             <div className="flex justify-between">
                 <div className="flex gap-1 items-center">
