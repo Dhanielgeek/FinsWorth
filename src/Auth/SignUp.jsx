@@ -16,17 +16,6 @@ const HandleLogin = async ()=>{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
   return (
     <div className='w-[100%] h-[100vh] flex justify-center items-center'>
       <div className='w-[30%] h-[90%] bg-[#FDFDF7] rounded-[10px] shadow-xl max-sm:w-[90%]'>
