@@ -16,14 +16,15 @@ const data = {company_Name,email,password,confirmPassword}
 const Url = 'https://finsworthpro.onrender.com/api/createUser'
 
 
-const HandleLogin = async ()=>{
+const HandleLogin = async (e)=>{
   e.preventDefault()
   try{
     const response = await axios.post(Url,data);
     console.log(response.data.data);
   }
   catch(error){
-    
+    const errormessage = error.response ? error.response.data.error : 'An Errror occuured'
+    console.log(errormessage);
   }
 }
 
@@ -59,7 +60,7 @@ const HandleLogin = async ()=>{
             <p className=' text-[12.5px] max-sm:text-[10px]'>By signing up you agree to our Terms of Service and Privacy Policy</p>
           </div>
           <section className=' w-[100%] h-[18%] flex justify-center items-center flex-col'>
-            <button className='w-[90%] h-[50%] bg-[#023047] rounded-md text-[#FDFDF7] font-semibold'>Register</button>
+            <button className='w-[90%] h-[50%] bg-[#023047] rounded-md text-[#FDFDF7] font-semibold' onClick={HandleLogin}>Register</button>
             <span className='font-semibold text-[#023047]'>Already have an account ?  <Link to='/login' className=' text-md text-[#FB8500] font-bold'>Login</Link> </span>
           </section>
         </form>
