@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import Logo from '../assets/goldLogo.png';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 const SignUp = () => {
 
@@ -11,8 +12,19 @@ const [password, setpassword] = useState('')
 const [confirmPassword, setconfirmPassword] = useState('')
 
 
+const data = {company_Name,email,password,confirmPassword}
+const Url = 'https://finsworthpro.onrender.com/api/createUser'
+
+
 const HandleLogin = async ()=>{
-  
+  e.preventDefault()
+  try{
+    const response = await axios.post(Url,data);
+    console.log(response.data.data);
+  }
+  catch(error){
+    
+  }
 }
 
 
