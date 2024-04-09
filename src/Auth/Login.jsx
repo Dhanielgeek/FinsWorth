@@ -10,6 +10,7 @@ const Login = () => {
   const [loading, setLoading] = useState(false);
   const [error, setPassError] = useState("");
   const [emailError,setEmailError]= useState("")
+  
   const handleReveal = (e) => {
     e.preventDefault();
     setReveal(!reveal);
