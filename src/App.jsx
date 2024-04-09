@@ -7,6 +7,7 @@ import Home from './Body/Home'
 import Heroes from './Body/Heroes'
 import Contactus from './Body/ContactUs'
 import ForgetPassword from './Auth/ForgetPassword'
+import DashBoard from './Dashboard/DashBoard'
 
 
 const router = createBrowserRouter([
@@ -38,6 +39,13 @@ const router = createBrowserRouter([
                 path: '',
                 element:<Heroes/>
             }
+        ]
+    },
+    {
+        path: '/dashboard',
+        element: <DashBoard/>,
+        children : [
+            
         ]
     }
 ])
