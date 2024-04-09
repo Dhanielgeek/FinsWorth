@@ -10,6 +10,7 @@ const Login = () => {
   const [loading, setLoading] = useState(false);
   const [error, setPassError] = useState("");
   const [emailError,setEmailError]= useState("")
+  const [nullError,setNullError]= useState("")
   
   const handleReveal = (e) => {
     e.preventDefault();
@@ -24,23 +25,41 @@ const Login = () => {
     console.log(password);
   };
   const validateEmail = (email) => {
-    // Comprehensive email validation using regex
-    const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    return regex.test(email);
+    // Regular expression for email validation
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
   };
   const data = { email, password };
   const url = "https://finsworthpro.onrender.com/api/login";
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!/(?=.*[a-zA-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}/.test(password)) {
+    // if (password.length < 6 || !/[a-zA-Z]/.test(password) || !/\d/.test(password) || !/[^a-zA-Z0-9]/.test(password)) {
+    //   setPassError('Password must contain at least 6 characters including one letter, one number, and one special character.');
+    //   return;
+    // }
+    
+    // if (!email || email.trim() === '') {
+    //   setNullError("Please enter your email");
+    //   console.log("empty")
+    //   return;
+    // }
+    // if (!validateEmail(email)) {
+    //   setEmailError("Please enter a valid email");
+    //   return;
+    // }
+
+    if (password.length < 6 || !/[a-zA-Z]/.test(password) || !/\d/.test(password) || !/[^a-zA-Z0-9]/.test(password)) {
       setPassError('Password must contain at least 6 characters including one letter, one number, and one special character.');
+    }
+    
+    if (!email || email.trim() === '') {
+      setNullError("Please enter your email");
       return;
     }
-    if(!validateEmail(email)){
-      setEmailError("Please enter a valid email")
-      return;
-      console.log("enter a valid email")
+    if (!validateEmail(email)) {
+      setEmailError("Please enter a valid email");
     }
+    
     try {
       const response = await axios.post(url, data);
       console.log(response);
@@ -53,6 +72,7 @@ const Login = () => {
     <form
       className="w-full px-4 h-screen flex justify-center items-center md:px-0"
       onSubmit={handleSubmit}
+      noValidate
     >
       <div className="w-full md:w-96 h-[480px] shadow-xl rounded-lg flex flex-col gap-4 px-4 relative justify-center">
         <div
@@ -78,7 +98,8 @@ const Login = () => {
               required
               className="w-full border border-[#023047]  rounded-md text-sm py-[8px] px-2 outline-none"
             />
-            {emailError && <p style={{ color: "red" }}>{emailError}</p>}
+            {nullError && <p className="text-xs text-red-500">{nullError}</p>}
+            {emailError && <p className="text-xs text-red-500">{emailError}</p>}
           </div>
           <div>
             <label className="text-sm text-[#023047]">Password</label>
@@ -95,10 +116,10 @@ const Login = () => {
             <i
               class={`bx ${
                 reveal ? "bxs-show" : "bxs-hide"
-              } absolute right-10 top-[280px] md:top-[300px]`}
+              } absolute right-10  ${error ? 'top-[270px] md:top-[290px]' : ' top-[285px] md:top-[300px]'}`}
               onClick={handleReveal}
             ></i>
-            {error && <p className="text-xs">{error}</p>}
+            {error && <p className="text-xs text-red-500">{error}</p>}
           </div>
           <div className="flex justify-between">
             <div className="flex gap-1 items-center">
