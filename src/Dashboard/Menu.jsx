@@ -22,20 +22,20 @@ const Menu = () => {
   };
 
   return (
-    <ul className='space-y-4 pt-10'>
+    <ul className='pt-10'>
       {items.map((item) => {
         const { title, href, Icon } = item;
         const isActive = activeItem === title;
 
         return (
-          <li key={title} className={`h-14 ${isActive ? 'Active' : ''}`}>
+          <li  key={title} className={`h-14 ${isActive ? 'Active' : ''}`}>
             <Link
               to={href}
               className={`flex items-center gap-4 p-5 transition-all text-sm font-medium text-white hover:bg-zinc-900 border-zinc-800 ${isActive ? 'text-yellow-500' : ''}`}
               onClick={() => handleItemClick(title)}
             >
               <span className='text-sm'><Icon size={20} /></span>
-              <span>{title}</span>
+              <span className='hidden lg:flex'>{title}</span>
             </Link>
           </li>
         );
