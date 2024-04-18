@@ -22,7 +22,7 @@ const Menu = () => {
   };
 
   return (
-    <ul className='pt-10'>
+    <ul className='md:pt-10'>
       {items.map((item) => {
         const { title, href, Icon } = item;
         const isActive = activeItem === title;
