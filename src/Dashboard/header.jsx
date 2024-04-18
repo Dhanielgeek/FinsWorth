@@ -1,7 +1,7 @@
 const DashBoardHeader = () => {
   return (
-    <div className="w-full h-[15%] bg-white shadow-sm flex items-center px-4 justify-between">
-      <div className="font-semibold text-sm">
+    <div className="w-full h-[10%] md:h-[15%] bg-white shadow-sm flex items-center px-4 justify-between">
+      <div className="font-semibold flex flex-col md:flex-row lg:gap-2 text-sm">
         <h1>Welcome!</h1>
         <h1>Ochemeta LTD</h1>
       </div>

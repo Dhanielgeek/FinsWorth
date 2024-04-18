@@ -16,7 +16,20 @@ const DashBoard = () => {
       </div>
       {/* transaction history */}
       <div>
-        <p className="text-[#333333] font-semibold text-xl">Transaction History</p>
+        <p className="text-[rgb(51,51,51)] font-semibold text-xl pb-6">Add Transaction</p>
+        <table className="">
+          <tr className="">
+            <th>Category</th>
+            <th>Amount</th>
+            <th>Date</th>
+          </tr>
+
+          <tr>
+            <td className=""><input type="text" className="outline-none" /></td>
+            <td><input type="text" className="outline-none" /></td>
+            <td><input type="date" className="outline-none" /></td>
+          </tr>
+        </table>
       </div>
     </div>
   );
