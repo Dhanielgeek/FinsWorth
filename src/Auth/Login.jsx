@@ -110,7 +110,7 @@ const Login = () => {
                 className="w-full border border-[#023047]  rounded-md text-sm py-[8px] px-2 outline-none"
               />
               <i
-                class={`bx ${
+                className={`bx ${
                   reveal ? "bxs-show" : "bxs-hide"
                 } absolute right-10 `}
                 onClick={handleReveal}
