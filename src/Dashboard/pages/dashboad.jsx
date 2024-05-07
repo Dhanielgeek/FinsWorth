@@ -1,7 +1,7 @@
 import Total from "./Total";
 const DashBoard = () => {
   return (
-    <div className="p-4 flex flex-col gap-6">
+    <div className=" p-4 flex flex-col gap-6">
       <div className="flex flex-col lg:flex-row gap-4">
         <div>
           <Total tittle="Current Balance" balance="0.00" />
@@ -16,18 +16,18 @@ const DashBoard = () => {
       </div>
       {/* transaction history */}
       <div>
-        <p className="text-[rgb(51,51,51)] font-semibold text-xl pb-6">Add Transaction</p>
+        <p className="text-[rgb(51,51,51)] font-semibold text-xl pb-6">Transaction History</p>
         <table className="">
           <tr className="">
-            <th>Category</th>
+            <th></th>
             <th>Amount</th>
             <th>Date</th>
           </tr>
 
           <tr>
-            <td className=""><input type="text" className="outline-none" /></td>
-            <td><input type="text" className="outline-none" /></td>
-            <td><input type="date" className="outline-none" /></td>
+            <td className=""><input type="text" className="outline-none bg-[#f3f4f6]" /></td>
+            <td><input type="text" className="outline-none bg-[#f3f4f6]" /></td>
+            <td><input type="date" className="outline-none bg-[#f3f4f6]" /></td>
           </tr>
         </table>
       </div>
