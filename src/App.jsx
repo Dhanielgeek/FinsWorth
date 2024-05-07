@@ -8,12 +8,14 @@ import Home from "./Body/Home";
 import Heroes from "./Body/Heroes";
 import Contactus from "./Body/ContactUs";
 import ForgetPassword from "./Auth/ForgetPassword";
+import Expenses from "./Dashboard/pages/Expenses";
 import Dashboard from "./Dashboard/pages/DashBoard";
 import Budget from "./Dashboard/pages/budget";
-import Expenses from "./Dashboard/pages/expenses";
+
 import Notification from "./Dashboard/pages/notification";
 import Settings from "./Dashboard/pages/setting";
 import DashBoard from "./Dashboard/pages/dashboad"
+import Verify from "./Auth/Verify";
 
 
 const App = () => {
@@ -22,6 +24,7 @@ const App = () => {
       <Routes>
         <Route path="signup" element={<SignUp />} />
         <Route path="login" element={<Login />} />
+        <Route path="verify" element={<Verify />} />
         <Route path="contact" element={<Contactus />} />
         <Route path="forgetpass" element={<ForgetPassword />} />
         <Route path="/" element={<Layout />}>
