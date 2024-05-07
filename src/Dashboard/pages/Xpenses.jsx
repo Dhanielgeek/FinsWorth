@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Expenses = () => {
+const Xpenses = () => {
   const [createExpenses, setCreateExpenses] = useState(false);
   const [expenseData, setExpenseData] = useState({
     expenseCategory: "",
@@ -171,4 +171,4 @@ const Expenses = () => {
   );
 };
 
-export default Expenses;
+export default Xpenses;
