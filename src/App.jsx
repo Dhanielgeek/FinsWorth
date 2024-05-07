@@ -7,7 +7,7 @@ import Home from "./Body/Home";
 import Heroes from "./Body/Heroes";
 import Contactus from "./Body/ContactUs";
 import ForgetPassword from "./Auth/ForgetPassword";
-import Expenses from "./Dashboard/pages/Expenses";
+import Xpenses from "./Dashboard/pages/Xpenses";
 import Dashboard from "./Dashboard/pages/DashBoard";
 import Budget from "./Dashboard/pages/budget";
 
@@ -33,7 +33,7 @@ const App = () => {
         <Route path="/dashboard" element={<Dashboard />}>
         <Route path="dashboard" element={<DashBoard/>} />
           <Route path="budget" element={<Budget />} />
-          <Route path="expenses" element={<Expenses />} />
+          <Route path="expenses" element={<Xpenses/>}/>
           <Route path="notification" element={<Notification />} />
           <Route path="settings" element={<Settings />} />
         </Route>
