@@ -21,7 +21,7 @@ const DashBoardHeader = () => {
         </div>
         <p className="hidden lg:flex text-blue-900 font-semibold text-base">Mary francis</p>
         <div className="w-[30px] lg:w-[40px] h-[30px] lg:h-[40px] flex items-center justify-center border-2 border-black rounded-full">
-          M
+          MD
         </div>
       </div>
     </div>
