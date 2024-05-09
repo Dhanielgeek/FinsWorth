@@ -7,3 +7,27 @@
 .expenses-icon{
     text-align:left;
 }
+
+.triangle-gradient {
+   
+    position: relative;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 100px 200px 100px; /* Adjust these values to change the size of the triangles */
+    border-color: transparent transparent rgba(59, 130, 246, 1) transparent;
+    background: linear-gradient(to bottom right, rgba(67, 235, 199, 1) 50%, rgba(255, 215, 0, 1) 50%);
+}
+
+.triangle-gradient::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 100px 200px 100px; /* Adjust these values to change the size of the triangles */
+    border-color: transparent transparent rgba(244, 114, 208, 1) transparent;
+    background: linear-gradient(to bottom right, rgba(252, 211, 77, 1) 50%, rgba(255, 134, 134, 1) 50%);
+}
