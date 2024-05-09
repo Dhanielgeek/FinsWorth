@@ -5,7 +5,6 @@ import Budget from "./budget";
 import Xpenses from "./Xpenses";
 import Notification from "./notification";
 import Settings  from "./setting";
-// import CreateBudget from "./CreateBudget";
 
 
 
@@ -20,7 +19,7 @@ const Dashboard = () => {
         <Route path='expenses' element={<Xpenses/>}/>
         <Route path="notification" element={<Notification />} />
         <Route path="settings" element={<Settings />} />
-        {/* <Route path="createbudget" element={<CreateBudget/>}/> */}
+      
       </Routes>
     
     </DashBoardLayout>
