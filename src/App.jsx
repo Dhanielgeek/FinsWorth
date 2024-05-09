@@ -15,7 +15,6 @@
   import Settings from "./Dashboard/pages/setting";
   import DashBoard from "./Dashboard/pages/dashboad"
   import Verify from "./Auth/Verify";
-  import CreateBudget from "./Dashboard/pages/CreateBudget";
 
 
   const App = () => {
@@ -35,7 +34,6 @@
           <Route path="dashboard" element={<DashBoard/>} />
             <Route path="budget" element={<Budget />} />
             <Route path="expenses" element={<Xpenses/>}/>
-            <Route path="createbudget" element={<CreateBudget/>}/>
             <Route path="notification" element={<Notification />} />
             <Route path="settings" element={<Settings />} />
           </Route>
