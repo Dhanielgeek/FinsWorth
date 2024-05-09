@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"; // Import Link component
 const Budget = () => {
   return (
     <div className="flex justify-between">
@@ -12,7 +13,11 @@ const Budget = () => {
         </div>
       </div>
       <div className="w-32  h-14 bg-[#FB8500] text-white text-sm flex items-center justify-center rounded-lg">
-        Create Budget <i class='bx bx-plus'></i>
+        {/* Use Link component for navigation */}
+        <Link to="/createbudget">Create Budget</Link>
+        <Link to="/signup">Create Budget</Link>
+        {/* Optionally, you can also add an icon */}
+        <i className='bx bx-plus'></i>
       </div>
     </div>
   );
