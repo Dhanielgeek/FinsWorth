@@ -15,7 +15,6 @@ const Budget = () => {
       <div className="w-32  h-14 bg-[#FB8500] text-white text-sm flex items-center justify-center rounded-lg">
         {/* Use Link component for navigation */}
         <Link to="/createbudget">Create Budget</Link>
-        <Link to="/signup">Create Budget</Link>
         {/* Optionally, you can also add an icon */}
         <i className='bx bx-plus'></i>
       </div>
