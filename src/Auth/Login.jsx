@@ -148,7 +148,11 @@ const Login = () => {
               ariaLabel="falling-circles-loading"
             />
           ) : (
-            <span>Login</span>
+            <Link
+              to="/dashboard/*"
+            >
+              Login
+            </Link>
           )}
         </button>
 
