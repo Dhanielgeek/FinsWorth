@@ -1,5 +1,4 @@
 
-import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import SignUp from "./Auth/SignUp";
 import Login from "./Auth/Login";
@@ -28,7 +27,7 @@ const App = () => {
           <Route path="" element={<Home />} />
           <Route path="heroes" element={<Heroes />} />
         </Route>
-        <Route path="/dashboard" element={<Dashboard />}>
+        <Route path="/dashboard/*" element={<Dashboard />}>
         <Route path="dashboard" element={<DashBoard/>} />
           <Route path="budget" element={<Budget />} />
           <Route path="expenses" element={<Expenses />} />

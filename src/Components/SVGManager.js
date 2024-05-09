@@ -113,7 +113,6 @@ function SVGManager({ item, ...props }) {
         </>
       );
       break;
-    // Other cases...
     default:
       svgPath = null;
   }
