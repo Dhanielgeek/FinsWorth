@@ -14,6 +14,7 @@
   import Settings from "./Dashboard/pages/setting";
   import DashBoard from "./Dashboard/pages/dashboad"
   import Verify from "./Auth/Verify";
+  import VerifiedSucess from "./Auth/VerifiedSucess";
 
 
 
@@ -23,6 +24,7 @@
         <Routes>
           <Route path="signup" element={<SignUp />} />
           <Route path="login" element={<Login />} />
+          <Route path="verifysucess" element={<VerifiedSucess/>} />
           <Route path="verify" element={<Verify />} />
           <Route path="contact" element={<Contactus />} />
           <Route path="forgetpass" element={<ForgetPassword />} />
