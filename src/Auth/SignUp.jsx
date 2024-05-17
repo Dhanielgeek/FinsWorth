@@ -46,6 +46,10 @@ const SignUp = () => {
       const response = await axios.post(Url, data);
       console.log(response);
       setResponseMessage("Please check your email for verification.");
+      setcompany_Name('')
+      setemail('')
+      setpassword('')
+      setconfirmPassword('')
       setShowPopup(true); // Show the popup
     } catch (error) {
       const errorMessage = error.response
