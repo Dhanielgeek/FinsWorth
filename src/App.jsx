@@ -28,7 +28,7 @@
          
           <Route path="newpass" element={<CreateNewPassword/>} />
 
-          <Route path="verify/id" element={<VerifiedSucess/>} />
+          <Route path="verify/:id" element={<VerifiedSucess/>} />
 
           {/* <Route path="verify" element={<Verify />} /> */}
           <Route path="contact" element={<Contactus />} />
