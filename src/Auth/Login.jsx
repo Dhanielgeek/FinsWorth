@@ -4,6 +4,8 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { FallingLines } from "react-loader-spinner";
+import { useDispatch } from "react-redux";
+import { userData, userToken } from "../Functions/Slice";
 const Login = () => {
   const [reveal, setReveal] = useState(false);
   const [email, setEmail] = useState("");
@@ -12,6 +14,12 @@ const Login = () => {
   const [error, setPassError] = useState("");
   const [emailError, setEmailError] = useState("");
   const [nullError, setNullError] = useState("");
+
+
+const dispatch = useDispatch()
+
+
+
 
   const handleReveal = (e) => {
     e.preventDefault();
@@ -56,7 +64,9 @@ const Login = () => {
     try {
       setLoading(true);
       const response = await axios.post(url, data);
-      console.log(response);
+      dispatch(userData(response.data.dat))
+      dispatch(userToken(response.data.token))
+      
     } catch (error) {
       console.log(error.message);
     } finally {
