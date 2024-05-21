@@ -1,5 +1,15 @@
-import { Link } from "react-router-dom"; // Import Link component
+import { useState } from 'react';
+
+import CreateBudgetModal from './CreateBudget';
+
 const Budget = () => {
+  const [visible, setVisible] = useState(false);
+
+  const onCreate = (values) => {
+    console.log('Received values of form: ', values);
+    setVisible(false);
+  };
+
   return (
     <div className="flex justify-between">
       <div className="flex gap-4">
@@ -12,12 +22,18 @@ const Budget = () => {
           <p>0.00</p>
         </div>
       </div>
-      <div className="w-32  h-14 bg-[#FB8500] text-white text-sm flex items-center justify-center rounded-lg">
-        {/* Use Link component for navigation */}
-        <Link to="/createbudget">Create Budget</Link>
-        {/* Optionally, you can also add an icon */}
+      <div
+        className="w-32 h-14 bg-[#FB8500] text-white text-sm flex items-center justify-center rounded-lg cursor-pointer"
+        onClick={() => setVisible(true)}
+      >
+        Create Budget
         <i className='bx bx-plus'></i>
       </div>
+      <CreateBudgetModal
+        visible={visible}
+        onCreate={onCreate}
+        onCancel={() => setVisible(false)}
+      />
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import DashBoardLayout from "../dashboardLayout";
 import { Routes, Route } from 'react-router-dom';
 import DashBoard from "./dashboad";
-import Budget from "./budget";
+import Budget from "./Budget";
 import Xpenses from "./Xpenses";
 import Notification from "./notification";
 import Settings  from "./setting";
