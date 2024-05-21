@@ -40,6 +40,14 @@ const Login = () => {
   const data = { email, password };
   const url = 'https://finsworthpro.onrender.com/api/login';
 
+
+
+
+
+
+
+
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -54,7 +62,6 @@ const Login = () => {
       );
       return;
     }
-
     if (!email || email.trim() === '') {
       setNullError('Please enter your email');
       return;
@@ -83,6 +90,9 @@ const Login = () => {
       setLoading(false);
     }
   };
+
+
+  
 
   return (
     <form
