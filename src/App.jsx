@@ -9,7 +9,6 @@
   import ForgetPassword from "./Auth/ForgetPassword";
   import Xpenses from "./Dashboard/pages/Xpenses";
   import Dashboard from "./Dashboard/pages/DashBoard";
-  import Budget from "./Dashboard/pages/Budget";
   import Notification from "./Dashboard/pages/notification";
   import Settings from "./Dashboard/pages/setting";
   import DashBoard from "./Dashboard/pages/dashboad"
@@ -39,7 +38,6 @@
           </Route>
           <Route path="/dashboard/*" element={<Dashboard />}>
           <Route path="dashboard" element={<DashBoard/>} />
-            <Route path="budget" element={<Budget />} />
             <Route path="expenses" element={<Xpenses/>}/>
             <Route path="notification" element={<Notification />} />
             <Route path="settings" element={<Settings />} />
