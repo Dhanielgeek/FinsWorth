@@ -14,6 +14,7 @@
   import DashBoard from "./Dashboard/pages/dashboad"
   // import Verify from "./Auth/Verify";
   import VerifiedSucess from "./Auth/VerifiedSucess";
+  import BudgetPage from "./Dashboard/pages/BudgetPage";
   import CreateNewPassword from "./Auth/CreateNewPassword";
 
 
@@ -38,6 +39,8 @@
           </Route>
           <Route path="/dashboard/*" element={<Dashboard />}>
           <Route path="dashboard" element={<DashBoard/>} />
+          
+            <Route path="budget" element={<BudgetPage/>} />
             <Route path="expenses" element={<Xpenses/>}/>
             <Route path="notification" element={<Notification />} />
             <Route path="settings" element={<Settings />} />
