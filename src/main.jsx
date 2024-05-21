@@ -4,9 +4,12 @@ import App from './App.jsx'
 import './index.css'
 import { Provider } from 'react-redux'
 import store from '../src/Functions/Store.js'
+import { Toaster } from 'react-hot-toast'
+import 'react-toastify/dist/ReactToastify.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <Toaster/>
     <Provider store={store}>
       <App />
     </Provider>
