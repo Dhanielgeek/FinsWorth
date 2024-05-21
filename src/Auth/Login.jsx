@@ -1,12 +1,22 @@
-import React from "react";
+
 import Logo from "../../public/images/logo.png";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { FallingLines } from "react-loader-spinner";
 import { useDispatch } from "react-redux";
 import { userData, userToken } from "../Functions/Slice";
+import toast from "react-hot-toast";
+
+
+
+
+
 const Login = () => {
+
+
+
+
   const [reveal, setReveal] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -17,6 +27,8 @@ const Login = () => {
 
 
 const dispatch = useDispatch()
+
+const Navigate = useNavigate()
 
 
 
@@ -40,7 +52,14 @@ const dispatch = useDispatch()
   };
   const data = { email, password };
   const url = "https://finsworthpro.onrender.com/api/login";
+
+
+
+
+
   const handleSubmit = async (e) => {
+ 
+
     e.preventDefault();
 
     if (
@@ -64,11 +83,18 @@ const dispatch = useDispatch()
     try {
       setLoading(true);
       const response = await axios.post(url, data);
+      toast.success(response.data.message,{duration: 3000})
+      setTimeout(() => {
+        Navigate('/dashboard')
+      }, 3000);
       dispatch(userData(response.data.dat))
       dispatch(userToken(response.data.token))
       
     } catch (error) {
-      console.log(error.message);
+     if (axios.isAxiosError(error)) {
+        const errorMsg = error.response?.data?.message || 'An unexpected error occurred';
+        toast.error(errorMsg,{duration: 3000});
+    }
     } finally {
       setLoading(false);
     }
@@ -177,7 +203,7 @@ const dispatch = useDispatch()
             </Link>
           </span>
         </div>
-        {loading && <p>Loading...</p>}
+        
       </div>
     </form>
   );
