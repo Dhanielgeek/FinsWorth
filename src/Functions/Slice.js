@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 
-const Feature = createSlice({
+const featureSlice = createSlice({
     name: 'User',
     initialState: {
         user:{},
@@ -17,5 +17,5 @@ const Feature = createSlice({
     }
 })
 
-export const {userData,userToken} = Feature.actions;
-export default Feature.reducer;
+export const {userData,userToken} = featureSlice.actions;
+export default featureSlice.reducer;
