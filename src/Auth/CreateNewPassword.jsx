@@ -3,7 +3,6 @@ import { useState } from "react";
 const CreateNewPassword = () => {
   const [password, setPassword] = useState("");
   const [error, setPassError] = useState("");
-
   const handlePassword = (e) => {
     setPassword(e.target.value);
     console.log(password);
