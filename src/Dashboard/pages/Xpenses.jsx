@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Expenses = () => {
+const Xpenses = () => {
   const [createExpenses, setCreateExpenses] = useState(false);
   const [expenseData, setExpenseData] = useState({
     expenseCategory: "",
@@ -147,16 +147,6 @@ const Expenses = () => {
               value={expenseData.expenseAmount}
               onChange={handleChange}
             />
-            <input
-              className="h-14 px-2 text-gray-400 rounded-sm border-2 border-gray-400 w-3/5"
-              type="text"
-              placeholder="Enter Date"
-              id="date"
-              required
-              name="date"
-              value={expenseData.date}
-              onChange={handleChange}
-            />
             <textarea
               className="h-24 px-2 text-gray-400 rounded-sm border-2 border-gray-400 w-3/5"
               type="text"
@@ -181,4 +171,4 @@ const Expenses = () => {
   );
 };
 
-export default Expenses;
+export default Xpenses;
